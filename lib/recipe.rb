@@ -20,6 +20,6 @@ class Recipe
   def total_calories
     ingredients.map{|ing|(ing.calories)*self.amount_required(ing)}.reduce do |sum, cal|
       sum+cal
-    end   
+    end
   end
 end
