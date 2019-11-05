@@ -1,6 +1,7 @@
 require 'minitest'
 require 'minitest/autorun'
 require_relative '../lib/recipe'
+require_relative '../lib/ingredient'
 
 class RecipeTest < Minitest::Test
   def setup
@@ -15,5 +16,9 @@ class RecipeTest < Minitest::Test
 
   def test_name
     assert_equal 'Mac and Cheese', @mac_and_cheese.name
-  end   
+  end
+
+  def test_ingredients_required
+    assert_equal ({}), @mac_and_cheese.ingredients_required
+  end
 end
