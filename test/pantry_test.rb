@@ -10,5 +10,9 @@ class PantryTest < Minitest::Test
     @mac_and_cheese = Recipe.new("Mac and Cheese")
     @mac_and_cheese.add_ingredient(cheese, 2)
     @mac_and_cheese.add_ingredient(mac, 8)
+  end
+
+  def test_existence
+    assert_instance_of Pantry, @pantry
   end   
 end
