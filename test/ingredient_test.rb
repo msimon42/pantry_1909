@@ -14,6 +14,9 @@ class IngredientTest < Minitest::Test
   def test_name
     assert_equal 'Cheese', @cheese.name
   end
-    
+
+  def test_unit
+    assert_equal 'oz', @cheese.unit
+  end     
 
 end
