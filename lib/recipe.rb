@@ -8,4 +8,8 @@ class Recipe
   def add_ingredient(ingredient, amt)
     @ingredients_required[ingredient] = amt
   end
+
+  def amount_required(ingredient)
+    @ingredients_required[ingredient]
+  end   
 end
