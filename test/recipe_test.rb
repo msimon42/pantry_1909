@@ -11,5 +11,9 @@ class RecipeTest < Minitest::Test
 
   def test_existence
     assert_instance_of Recipe, @mac_and_cheese
+  end
+
+  def test_name
+    assert_equal 'Mac and Cheese', @mac_and_cheese.name
   end   
 end
