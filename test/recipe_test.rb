@@ -4,7 +4,12 @@ require_relative '../lib/recipe'
 
 class RecipeTest < Minitest::Test
   def setup
-    @mac_and_cheese = Recipe.new
+    @mac_and_cheese = Recipe.new('Mac and Cheese')
     @cheese = Ingredient.new("Cheese", "C", 100)
     @mac = Ingredient.new("Macaroni", "oz", 30)
-  end    
+  end
+
+  def test_existence
+    assert_instance_of Recipe, @mac_and_cheese
+  end   
+end
