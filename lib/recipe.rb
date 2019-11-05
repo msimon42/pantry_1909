@@ -11,5 +11,9 @@ class Recipe
 
   def amount_required(ingredient)
     @ingredients_required[ingredient]
+  end
+
+  def ingredients
+    @ingredients_required.keys
   end   
 end
